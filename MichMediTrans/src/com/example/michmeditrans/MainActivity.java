@@ -1,9 +1,11 @@
 package com.example.michmeditrans;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
@@ -30,5 +32,12 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public void onButton(View view){
+		Intent myInent = new Intent(view.getContext(),PatientsActivity.class);
+		startActivity(myInent);
+		
+	
 	}
 }
