@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.michmeditrans"
+    package="edu.wayne.michmeditrans"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -23,12 +23,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PatientsActivity"
+            android:name="edu.wayne.medical.PatientsActivity"
             android:label="@string/title_activity_patients" >
         </activity>
         <activity
             android:name="edu.wayne.transportation.PatientsViewTransActivity"
             android:label="@string/title_activity_patients_view_trans" >
+        </activity>
+        <activity
+            android:name=".SignUpActivity"
+            android:label="@string/title_activity_sign_up" >
+        </activity>
+        <activity
+            android:name="edu.wayne.transportation.DriversActivity"
+            android:label="@string/title_activity_drivers" >
+        </activity>
+        <activity
+            android:name="edu.wayne.medical.DoctorsActivity"
+            android:label="@string/title_activity_doctors" >
+        </activity>
+        <activity
+            android:name="edu.wayne.medical.PatientsViewDoctorActivity"
+            android:label="@string/title_activity_patients_view_doctor" >
         </activity>
     </application>
 

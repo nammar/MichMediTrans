@@ -2,9 +2,13 @@
 <resources>
 
     <string name="app_name">MichMediTrans</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">MichMediTrans!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_patients">PatientsActivity</string>
     <string name="title_activity_patients_view_trans">PatientsViewTransActivity</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_drivers">DriversActivity</string>
+    <string name="title_activity_doctors">DoctorsActivity</string>
+    <string name="title_activity_patients_view_doctor">PatientsViewDoctorActivity</string>
 
 </resources>

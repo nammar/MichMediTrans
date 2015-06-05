@@ -1,27 +1,32 @@
-package edu.wayne.transportation;
+package edu.wayne.michmeditrans;
 
+import edu.wayne.medical.PatientsActivity;
 import edu.wayne.michmeditrans.R;
-import edu.wayne.michmeditrans.R.id;
-import edu.wayne.michmeditrans.R.layout;
-import edu.wayne.michmeditrans.R.menu;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-public class PatientsViewTransActivity extends Activity {
+/**
+ * This activity represents the sing in page. It includes roles (doctor, patient, driver)
+ * @author narimanammar
+ *
+ */
+public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_patients_view_trans);
+		setContentView(R.layout.activity_main);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.patients_view_trans, menu);
+		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
@@ -35,5 +40,12 @@ public class PatientsViewTransActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public void onButton(View view){
+		Intent myInent = new Intent(view.getContext(),PatientsActivity.class);
+		startActivity(myInent);
+		
+	
 	}
 }
