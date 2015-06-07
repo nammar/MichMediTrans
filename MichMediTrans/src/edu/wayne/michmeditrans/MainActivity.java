@@ -9,9 +9,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 /**
- * This activity represents the sing in page. It includes roles (doctor, patient, driver)
+ * This activity represents the Role selection page. It includes roles (doctor, patient, driver)
+ * and takes the user to their corresponding login/sign in screen
  * @author narimanammar
  *
  */
@@ -21,6 +24,24 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		//Button01 is the button that corresponds to the patient in activity_main.xml
+		Button patient = (Button) findViewById(R.id.Button01);
+
+		patient.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+				// switching screens is done in two steps
+				//1. create intent 
+				Intent myIntent = new Intent(view.getContext(),
+						PatientsActivity.class);
+				//2. launch activity
+				startActivity(myIntent);
+
+			}
+		});
+
 	}
 
 	@Override
@@ -42,10 +63,5 @@ public class MainActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	
-	public void onButton(View view){
-		Intent myInent = new Intent(view.getContext(),PatientsActivity.class);
-		startActivity(myInent);
-		
 	
-	}
 }
