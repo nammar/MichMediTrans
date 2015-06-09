@@ -1,8 +1,10 @@
 package edu.wayne.michmeditrans;
 
+import org.xmlpull.v1.sax2.Driver;
+
 import edu.wayne.medical.PatientsActivity;
 import edu.wayne.michmeditrans.R;
-
+import edu.wayne.transportation.DriversActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +29,7 @@ public class MainActivity extends Activity {
 		
 		//Button01 is the button that corresponds to the patient in activity_main.xml
 		Button patient = (Button) findViewById(R.id.Button01);
+		Button driver = (Button) findViewById(R.id.Button03);
 
 		patient.setOnClickListener(new OnClickListener() {
 
@@ -38,7 +41,27 @@ public class MainActivity extends Activity {
 						PatientsActivity.class);
 				//2. launch activity
 				startActivity(myIntent);
+				
+				
+			}
+		
+			
+			
+		
+		});
+		
+		driver.setOnClickListener(new OnClickListener() {
 
+			@Override
+			public void onClick(View view) {
+				// switching screens is done in two steps
+				//1. create intent 
+				Intent myIntent = new Intent(view.getContext(),
+						DriversActivity.class);
+				//2. launch activity
+				startActivity(myIntent);
+				
+				
 			}
 		});
 
