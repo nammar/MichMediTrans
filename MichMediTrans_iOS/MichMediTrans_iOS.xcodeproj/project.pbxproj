@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3684352E1B2A3C3D0002FDEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684352D1B2A3C3D0002FDEF /* AppDelegate.swift */; };
+		368435301B2A3C3D0002FDEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684352F1B2A3C3D0002FDEF /* ViewController.swift */; };
+		368435331B2A3C3D0002FDEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368435311B2A3C3D0002FDEF /* Main.storyboard */; };
+		368435351B2A3C3D0002FDEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 368435341B2A3C3D0002FDEF /* Images.xcassets */; };
+		368435381B2A3C3D0002FDEF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368435361B2A3C3D0002FDEF /* LaunchScreen.xib */; };
+		368435441B2A3C3D0002FDEF /* MichMediTrans_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368435431B2A3C3D0002FDEF /* MichMediTrans_iOSTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3684353E1B2A3C3D0002FDEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 368435201B2A3C3C0002FDEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 368435271B2A3C3D0002FDEF;
+			remoteInfo = MichMediTrans_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		368435281B2A3C3D0002FDEF /* MichMediTrans_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MichMediTrans_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3684352C1B2A3C3D0002FDEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3684352D1B2A3C3D0002FDEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3684352F1B2A3C3D0002FDEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		368435321B2A3C3D0002FDEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		368435341B2A3C3D0002FDEF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		368435371B2A3C3D0002FDEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3684353D1B2A3C3D0002FDEF /* MichMediTrans_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MichMediTrans_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		368435421B2A3C3D0002FDEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		368435431B2A3C3D0002FDEF /* MichMediTrans_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MichMediTrans_iOSTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		368435251B2A3C3D0002FDEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3684353A1B2A3C3D0002FDEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3684351F1B2A3C3C0002FDEF = {
+			isa = PBXGroup;
+			children = (
+				3684352A1B2A3C3D0002FDEF /* MichMediTrans_iOS */,
+				368435401B2A3C3D0002FDEF /* MichMediTrans_iOSTests */,
+				368435291B2A3C3D0002FDEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		368435291B2A3C3D0002FDEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				368435281B2A3C3D0002FDEF /* MichMediTrans_iOS.app */,
+				3684353D1B2A3C3D0002FDEF /* MichMediTrans_iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3684352A1B2A3C3D0002FDEF /* MichMediTrans_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3684352D1B2A3C3D0002FDEF /* AppDelegate.swift */,
+				3684352F1B2A3C3D0002FDEF /* ViewController.swift */,
+				368435311B2A3C3D0002FDEF /* Main.storyboard */,
+				368435341B2A3C3D0002FDEF /* Images.xcassets */,
+				368435361B2A3C3D0002FDEF /* LaunchScreen.xib */,
+				3684352B1B2A3C3D0002FDEF /* Supporting Files */,
+			);
+			path = MichMediTrans_iOS;
+			sourceTree = "<group>";
+		};
+		3684352B1B2A3C3D0002FDEF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3684352C1B2A3C3D0002FDEF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		368435401B2A3C3D0002FDEF /* MichMediTrans_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				368435431B2A3C3D0002FDEF /* MichMediTrans_iOSTests.swift */,
+				368435411B2A3C3D0002FDEF /* Supporting Files */,
+			);
+			path = MichMediTrans_iOSTests;
+			sourceTree = "<group>";
+		};
+		368435411B2A3C3D0002FDEF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				368435421B2A3C3D0002FDEF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		368435271B2A3C3D0002FDEF /* MichMediTrans_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 368435471B2A3C3D0002FDEF /* Build configuration list for PBXNativeTarget "MichMediTrans_iOS" */;
+			buildPhases = (
+				368435241B2A3C3D0002FDEF /* Sources */,
+				368435251B2A3C3D0002FDEF /* Frameworks */,
+				368435261B2A3C3D0002FDEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MichMediTrans_iOS;
+			productName = MichMediTrans_iOS;
+			productReference = 368435281B2A3C3D0002FDEF /* MichMediTrans_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3684353C1B2A3C3D0002FDEF /* MichMediTrans_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3684354A1B2A3C3D0002FDEF /* Build configuration list for PBXNativeTarget "MichMediTrans_iOSTests" */;
+			buildPhases = (
+				368435391B2A3C3D0002FDEF /* Sources */,
+				3684353A1B2A3C3D0002FDEF /* Frameworks */,
+				3684353B1B2A3C3D0002FDEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3684353F1B2A3C3D0002FDEF /* PBXTargetDependency */,
+			);
+			name = MichMediTrans_iOSTests;
+			productName = MichMediTrans_iOSTests;
+			productReference = 3684353D1B2A3C3D0002FDEF /* MichMediTrans_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		368435201B2A3C3C0002FDEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = MichMediTrans;
+				TargetAttributes = {
+					368435271B2A3C3D0002FDEF = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					3684353C1B2A3C3D0002FDEF = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 368435271B2A3C3D0002FDEF;
+					};
+				};
+			};
+			buildConfigurationList = 368435231B2A3C3D0002FDEF /* Build configuration list for PBXProject "MichMediTrans_iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3684351F1B2A3C3C0002FDEF;
+			productRefGroup = 368435291B2A3C3D0002FDEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				368435271B2A3C3D0002FDEF /* MichMediTrans_iOS */,
+				3684353C1B2A3C3D0002FDEF /* MichMediTrans_iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		368435261B2A3C3D0002FDEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				368435331B2A3C3D0002FDEF /* Main.storyboard in Resources */,
+				368435381B2A3C3D0002FDEF /* LaunchScreen.xib in Resources */,
+				368435351B2A3C3D0002FDEF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3684353B1B2A3C3D0002FDEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		368435241B2A3C3D0002FDEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				368435301B2A3C3D0002FDEF /* ViewController.swift in Sources */,
+				3684352E1B2A3C3D0002FDEF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		368435391B2A3C3D0002FDEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				368435441B2A3C3D0002FDEF /* MichMediTrans_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3684353F1B2A3C3D0002FDEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 368435271B2A3C3D0002FDEF /* MichMediTrans_iOS */;
+			targetProxy = 3684353E1B2A3C3D0002FDEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		368435311B2A3C3D0002FDEF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				368435321B2A3C3D0002FDEF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		368435361B2A3C3D0002FDEF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				368435371B2A3C3D0002FDEF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		368435451B2A3C3D0002FDEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		368435461B2A3C3D0002FDEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		368435481B2A3C3D0002FDEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MichMediTrans_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		368435491B2A3C3D0002FDEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MichMediTrans_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3684354B1B2A3C3D0002FDEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MichMediTrans_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MichMediTrans_iOS.app/MichMediTrans_iOS";
+			};
+			name = Debug;
+		};
+		3684354C1B2A3C3D0002FDEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MichMediTrans_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MichMediTrans_iOS.app/MichMediTrans_iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		368435231B2A3C3D0002FDEF /* Build configuration list for PBXProject "MichMediTrans_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				368435451B2A3C3D0002FDEF /* Debug */,
+				368435461B2A3C3D0002FDEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		368435471B2A3C3D0002FDEF /* Build configuration list for PBXNativeTarget "MichMediTrans_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				368435481B2A3C3D0002FDEF /* Debug */,
+				368435491B2A3C3D0002FDEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3684354A1B2A3C3D0002FDEF /* Build configuration list for PBXNativeTarget "MichMediTrans_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3684354B1B2A3C3D0002FDEF /* Debug */,
+				3684354C1B2A3C3D0002FDEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 368435201B2A3C3C0002FDEF /* Project object */;
+}
