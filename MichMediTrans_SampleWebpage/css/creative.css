@@ -181,7 +181,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #3399ff; /* Main MichMediTrans Letters Colors  */
-    background-image: url(../img/icon.png);
+    background-image: url(../img/System_Logo.png);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -239,6 +239,7 @@ header .header-content .header-content-inner p {
         margin-left: auto;
         max-width: 80%;
         font-size: 18px;
+        color: #000000
     }
 }
 
