@@ -1,18 +1,13 @@
 package edu.wayne.michmeditrans;
 
-import org.xmlpull.v1.sax2.Driver;
 
 import edu.wayne.medical.PatientsActivity;
 import edu.wayne.michmeditrans.R;
-import edu.wayne.transportation.DriversActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 
 /**
  * This activity represents the Role selection page. It includes roles (doctor, patient, driver)
@@ -25,46 +20,10 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		
-		//Button01 is the button that corresponds to the patient in activity_main.xml
-		Button patient = (Button) findViewById(R.id.Button01);
-		Button driver = (Button) findViewById(R.id.Button03);
+		setContentView(R.layout.activity_log_in);
+		Intent myIntent = new Intent(this.getBaseContext(),LogIn.class);
 
-		patient.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View view) {
-				// switching screens is done in two steps
-				//1. create intent 
-				//Intent myIntent = new Intent(view.getContext(),PatientsActivity.class);
-				Intent myIntent = new Intent(view.getContext(),
-				LogIn.class);
-				//2. launch activity
-				startActivity(myIntent);
-				
-				
-			}
-		
-			
-			
-		
-		});
-		
-		driver.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View view) {
-				// switching screens is done in two steps
-				//1. create intent 
-				Intent myIntent = new Intent(view.getContext(),
-						DriversActivity.class);
-				//2. launch activity
-				startActivity(myIntent);
-				
-				
-			}
-		});
+		startActivity(myIntent);
 
 	}
 
@@ -85,12 +44,6 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}
-	public void buttonSignIn(View view)
-	{
-		Intent intent = new Intent(MainActivity.this,LogIn.class);
-		startActivity(intent);
-		
 	}
 	
 	

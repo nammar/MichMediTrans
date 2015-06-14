@@ -1,3 +1,4 @@
+package edu.wayne.model;
 
 public class Users {
 	

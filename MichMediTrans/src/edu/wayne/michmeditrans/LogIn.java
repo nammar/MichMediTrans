@@ -1,11 +1,13 @@
 package edu.wayne.michmeditrans;
 
+import edu.wayne.medical.PatientsActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -30,25 +32,54 @@ public class LogIn extends Activity {
 		//SignUp.setOnClickListener((OnClickListener) this);
 		//ForgotPassword.setOnClickListener((OnClickListener) this);
 		
-	}
-	public void buttonSignUpMethod(View view)
-	{
-		Intent intent = new Intent(LogIn.this,SignUpActivity.class);
-		startActivity(intent);
-		
-	}
+		signin.setOnClickListener(new OnClickListener() {
 
-	public void SignInButton(View view)
-	{
-		//When the login button is clicked
-		switch(view.getId()){
-		case R.id.signin:
-			
-			
-			break;
-		}
-			
-		}
+			@Override
+			public void onClick(View view) {
+				// switching screens is done in two steps
+				//1. create intent 
+				Intent myIntent = new Intent(view.getContext(),RoleSelectionActivity.class);
+
+				//2. launch activity
+				startActivity(myIntent);
+				
+				
+			}
+		});
+		
+		SignUp.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+				// switching screens is done in two steps
+				//1. create intent 
+				Intent myIntent = new Intent(view.getContext(),SignUpActivity.class);
+
+				//2. launch activity
+				startActivity(myIntent);
+				
+				
+			}
+		});
+	}
+//	public void buttonSignUpMethod(View view)
+//	{
+//		Intent intent = new Intent(LogIn.this,SignUpActivity.class);
+//		startActivity(intent);
+//		
+//	}
+
+//	public void SignInButton(View view)
+//	{
+//		//When the login button is clicked
+//		switch(view.getId()){
+//		case R.id.signin:
+//			
+//			
+//			break;
+//		}
+//			
+//		}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

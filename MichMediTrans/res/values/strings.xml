@@ -11,5 +11,6 @@
     <string name="title_activity_doctors">DoctorsActivity</string>
     <string name="title_activity_patients_view_doctor">PatientsViewDoctorActivity</string>
     <string name="title_activity_log_in">LogIn</string>
+    <string name="title_activity_role_selection">RoleSelectionActivity</string>
 
 </resources>
