@@ -37,8 +37,9 @@ public class MainActivity extends Activity {
 			public void onClick(View view) {
 				// switching screens is done in two steps
 				//1. create intent 
+				//Intent myIntent = new Intent(view.getContext(),PatientsActivity.class);
 				Intent myIntent = new Intent(view.getContext(),
-						PatientsActivity.class);
+				LogIn.class);
 				//2. launch activity
 				startActivity(myIntent);
 				
@@ -84,6 +85,12 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	public void buttonSignIn(View view)
+	{
+		Intent intent = new Intent(MainActivity.this,LogIn.class);
+		startActivity(intent);
+		
 	}
 	
 	

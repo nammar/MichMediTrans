@@ -10,5 +10,6 @@
     <string name="title_activity_drivers">DriversActivity</string>
     <string name="title_activity_doctors">DoctorsActivity</string>
     <string name="title_activity_patients_view_doctor">PatientsViewDoctorActivity</string>
+    <string name="title_activity_log_in">LogIn</string>
 
 </resources>

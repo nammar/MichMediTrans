@@ -46,6 +46,10 @@
             android:name="edu.wayne.medical.PatientsViewDoctorActivity"
             android:label="@string/title_activity_patients_view_doctor" >
         </activity>
+        <activity
+            android:name=".LogIn"
+            android:label="@string/title_activity_log_in" >
+        </activity>
     </application>
 
 </manifest>
