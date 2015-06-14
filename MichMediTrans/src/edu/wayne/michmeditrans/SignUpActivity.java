@@ -35,9 +35,9 @@ public class SignUpActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_sign_up);
 		
-		database=openOrCreateDatabase("MyDB1",MODE_PRIVATE, null);
-        database.execSQL("CREATE TABLE IF NOT EXISTS Users(etFirstName VARCHAR,etLastName VARCHAR,etemail VARCHAR, etUserName VARCHAR,etPassword VARCHAR, );");
-	
+//		database=openOrCreateDatabase("MyDB1",MODE_PRIVATE, null);
+//        database.execSQL("CREATE TABLE IF NOT EXISTS Users(etFirstName VARCHAR,etLastName VARCHAR,etemail VARCHAR, etUserName VARCHAR,etPassword VARCHAR, );");
+//	
 		Doctor = (RadioButton) findViewById(R.id.Doctor);
 		Patient = (RadioButton) findViewById(R.id.Patient);
 		Driver = (RadioButton) findViewById(R.id.Driver);

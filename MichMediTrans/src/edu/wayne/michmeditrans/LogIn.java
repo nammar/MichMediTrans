@@ -1,6 +1,5 @@
 package edu.wayne.michmeditrans;
 
-import edu.wayne.medical.PatientsActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,8 +12,7 @@ import android.widget.EditText;
 
 public class LogIn extends Activity {
 
-	
-	Button signin,SignUp,ForgotPassword;
+	Button signin,signup,ForgotPassword;
 	EditText etUserName, etPassword;
 	
 	@Override
@@ -25,7 +23,7 @@ public class LogIn extends Activity {
 		etUserName = (EditText) findViewById(R.id.etUserName);
 		etPassword = (EditText) findViewById(R.id.etPassword);
 		signin = (Button) findViewById(R.id.signin);
-		SignUp = (Button) findViewById(R.id.SignUp);
+		signup = (Button) findViewById(R.id.SignUp);
 		ForgotPassword = (Button) findViewById(R.id.ForgotPassword);
 
 		//signin.setOnClickListener((OnClickListener) this);
@@ -47,7 +45,7 @@ public class LogIn extends Activity {
 			}
 		});
 		
-		SignUp.setOnClickListener(new OnClickListener() {
+		signup.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View view) {

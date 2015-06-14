@@ -50,6 +50,10 @@
             android:name=".LogIn"
             android:label="@string/title_activity_log_in" >
         </activity>
+        <activity
+            android:name=".RoleSelectionActivity"
+            android:label="@string/title_activity_role_selection" >
+        </activity>
     </application>
 
 </manifest>
