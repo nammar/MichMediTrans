@@ -4,11 +4,16 @@ import edu.wayne.michmeditrans.R;
 import edu.wayne.michmeditrans.R.id;
 import edu.wayne.michmeditrans.R.layout;
 import edu.wayne.michmeditrans.R.menu;
+import edu.wayne.transportation.PatientsViewTransActivity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class PatientsActivity extends Activity {
 
@@ -16,6 +21,26 @@ public class PatientsActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_patients);
+		
+		Button patientTrans = (Button) findViewById(R.id.Button05);
+		patientTrans.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+				// switching screens is done in two steps
+				//1. create intent 
+				Intent myIntent = new Intent(view.getContext(),PatientsViewTransActivity.class);
+
+				//2. launch activity
+				startActivity(myIntent);
+				
+				
+			}
+		
+			
+			
+		
+		});
 	}
 
 	@Override
