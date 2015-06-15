@@ -411,6 +411,7 @@
 				368435491B2A3C3D0002FDEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3684354A1B2A3C3D0002FDEF /* Build configuration list for PBXNativeTarget "MichMediTrans_iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				3684354C1B2A3C3D0002FDEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
