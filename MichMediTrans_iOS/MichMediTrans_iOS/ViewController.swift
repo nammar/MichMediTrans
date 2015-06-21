@@ -11,11 +11,15 @@ import UIKit
 class ViewController: UIViewController {
 
 
+
     @IBAction func signIn(sender: AnyObject) {
+        
     }
 
     @IBAction func signUp(sender: AnyObject) {
+        
     }
 
+    
 }
 
