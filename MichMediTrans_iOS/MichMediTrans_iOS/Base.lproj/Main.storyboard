@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Xb-8F-Tlo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -20,13 +20,14 @@
                                 <rect key="frame" x="104" y="285" width="173" height="30"/>
                                 <color key="backgroundColor" red="0.97289299240000005" green="0.59128623120000001" blue="0.1202985694" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Sign in">
+                                <state key="normal" title="Sign in as a patient">
                                     <color key="titleColor" red="0.89983822601010099" green="0.89983822601010099" blue="0.89983822601010099" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.97289299242424243" green="0.59128623119334978" blue="0.12029856937797526" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1fD-az-m0h"/>
                                     <action selector="signIn:" destination="dkx-z0-nzr" eventType="touchDown" id="cng-HH-W8f"/>
+                                    <segue destination="Usn-Tl-QBg" kind="show" id="lvX-UU-DA0"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="5s7-WW-4eE">
@@ -50,9 +51,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94" y="220"/>
+            <point key="canvasLocation" x="875" y="213"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Available Doctors-->
         <scene sceneID="VOa-tw-FCV">
             <objects>
                 <tableViewController id="EA5-JR-Oyb" customClass="DoctorTableViewController" customModule="MichMediTrans_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,21 +71,17 @@
                                             <rect key="frame" x="8" y="0.0" width="103" height="94"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xkm-9q-qHa">
-                                            <rect key="frame" x="124" y="0.0" width="42" height="21"/>
+                                            <rect key="frame" x="124" y="0.0" width="295" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m1F-Af-Ija" customClass="RatingControl">
-                                            <rect key="frame" x="119" y="39" width="300" height="47"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="Xkm-9q-qHa" id="wti-b8-c6A"/>
                                     <outlet property="photoImageView" destination="pqX-s7-gxY" id="Vbb-iI-rWU"/>
-                                    <outlet property="ratingControl" destination="m1F-Af-Ija" id="GaX-KR-epu"/>
+                                    <segue destination="Nfh-Og-BcN" kind="show" id="0Jh-Gh-gmh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -93,33 +90,88 @@
                             <outlet property="delegate" destination="EA5-JR-Oyb" id="WOx-if-H97"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="CgZ-iJ-wUJ"/>
+                    <navigationItem key="navigationItem" title="Available Doctors" id="CgZ-iJ-wUJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="G5T-T3-MmO">
+                            <connections>
+                                <segue destination="Nfh-Og-BcN" kind="show" id="RfP-LT-YqQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izp-Rj-bKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="213"/>
+            <point key="canvasLocation" x="2392" y="213"/>
         </scene>
-        <!--Patients View-->
-        <scene sceneID="xMh-ch-g4V">
+        <!--View Controller-->
+        <scene sceneID="O86-Re-zRj">
             <objects>
-                <navigationController title="Patients View" id="5Xb-8F-Tlo" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G74-bw-Zup">
+                <viewController id="Nfh-Og-BcN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sGr-DR-9PJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="BhN-91-bPt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9rE-L1-U3S">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doctors name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwf-uN-k0k">
+                                <rect key="frame" x="21" y="80" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rnY-du-wnL">
+                                <rect key="frame" x="16" y="111" width="331" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kke-Te-vmh">
+                                <rect key="frame" x="16" y="286" width="497" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Available appointments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNS-Ne-af4">
+                                <rect key="frame" x="16" y="257" width="189" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V5i-Kr-fYh">
+                                <rect key="frame" x="355" y="111" width="158" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mWc-EB-RAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3076" y="226"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AIS-iq-ySz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Usn-Tl-QBg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hHG-67-ajd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wwz-ne-mly">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="HXS-s6-LDC">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="EA5-JR-Oyb" kind="relationship" relationship="rootViewController" id="dpC-Ze-Q0c"/>
+                        <segue destination="EA5-JR-Oyb" kind="relationship" relationship="rootViewController" id="7Cv-lL-oqQ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vjj-oi-P71" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ioc-iK-zlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760" y="213"/>
+            <point key="canvasLocation" x="1580" y="213"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image" width="807" height="342"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="RfP-LT-YqQ"/>
+    </inferredMetricsTieBreakers>
 </document>

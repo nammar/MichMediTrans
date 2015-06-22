@@ -14,7 +14,6 @@
 		368435381B2A3C3D0002FDEF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368435361B2A3C3D0002FDEF /* LaunchScreen.xib */; };
 		368435441B2A3C3D0002FDEF /* MichMediTrans_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368435431B2A3C3D0002FDEF /* MichMediTrans_iOSTests.swift */; };
 		CB2AAB7E1B3715C40038D5A2 /* DoctorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2AAB7D1B3715C40038D5A2 /* DoctorTableViewCell.swift */; };
-		CB2AAB801B371F670038D5A2 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2AAB7F1B371F670038D5A2 /* RatingControl.swift */; };
 		CB2AAB821B37440D0038D5A2 /* DoctorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2AAB811B37440D0038D5A2 /* DoctorTableViewController.swift */; };
 		CB2AAB841B3745940038D5A2 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2AAB831B3745940038D5A2 /* Doctor.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		368435421B2A3C3D0002FDEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		368435431B2A3C3D0002FDEF /* MichMediTrans_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MichMediTrans_iOSTests.swift; sourceTree = "<group>"; };
 		CB2AAB7D1B3715C40038D5A2 /* DoctorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorTableViewCell.swift; sourceTree = "<group>"; };
-		CB2AAB7F1B371F670038D5A2 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		CB2AAB811B37440D0038D5A2 /* DoctorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorTableViewController.swift; sourceTree = "<group>"; };
 		CB2AAB831B3745940038D5A2 /* Doctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +92,6 @@
 				368435341B2A3C3D0002FDEF /* Images.xcassets */,
 				368435361B2A3C3D0002FDEF /* LaunchScreen.xib */,
 				3684352B1B2A3C3D0002FDEF /* Supporting Files */,
-				CB2AAB7F1B371F670038D5A2 /* RatingControl.swift */,
 			);
 			path = MichMediTrans_iOS;
 			sourceTree = "<group>";
@@ -224,7 +221,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB2AAB801B371F670038D5A2 /* RatingControl.swift in Sources */,
 				368435301B2A3C3D0002FDEF /* ViewController.swift in Sources */,
 				CB2AAB841B3745940038D5A2 /* Doctor.swift in Sources */,
 				3684352E1B2A3C3D0002FDEF /* AppDelegate.swift in Sources */,
