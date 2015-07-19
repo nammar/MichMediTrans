@@ -16,6 +16,7 @@
 		CB2AAB7E1B3715C40038D5A2 /* DoctorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2AAB7D1B3715C40038D5A2 /* DoctorTableViewCell.swift */; };
 		CB2AAB821B37440D0038D5A2 /* DoctorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2AAB811B37440D0038D5A2 /* DoctorTableViewController.swift */; };
 		CB2AAB841B3745940038D5A2 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2AAB831B3745940038D5A2 /* Doctor.swift */; };
+		CB57B6B91B39411700C7784A /* DoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57B6B81B39411700C7784A /* DoctorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		CB2AAB7D1B3715C40038D5A2 /* DoctorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorTableViewCell.swift; sourceTree = "<group>"; };
 		CB2AAB811B37440D0038D5A2 /* DoctorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorTableViewController.swift; sourceTree = "<group>"; };
 		CB2AAB831B3745940038D5A2 /* Doctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		CB57B6B81B39411700C7784A /* DoctorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				368435311B2A3C3D0002FDEF /* Main.storyboard */,
 				CB2AAB7D1B3715C40038D5A2 /* DoctorTableViewCell.swift */,
 				CB2AAB811B37440D0038D5A2 /* DoctorTableViewController.swift */,
+				CB57B6B81B39411700C7784A /* DoctorViewController.swift */,
 				CB2AAB831B3745940038D5A2 /* Doctor.swift */,
 				368435341B2A3C3D0002FDEF /* Images.xcassets */,
 				368435361B2A3C3D0002FDEF /* LaunchScreen.xib */,
@@ -226,6 +229,7 @@
 				3684352E1B2A3C3D0002FDEF /* AppDelegate.swift in Sources */,
 				CB2AAB821B37440D0038D5A2 /* DoctorTableViewController.swift in Sources */,
 				CB2AAB7E1B3715C40038D5A2 /* DoctorTableViewCell.swift in Sources */,
+				CB57B6B91B39411700C7784A /* DoctorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

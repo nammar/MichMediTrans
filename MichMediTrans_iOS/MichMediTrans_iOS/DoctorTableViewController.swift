@@ -8,9 +8,15 @@
 
 import UIKit
 
-class DoctorTableViewController: UITableViewController {
+class DoctorTableViewController: UITableViewController,UITableViewDelegate {
     var doctors = [Doctor]();
 
+    
+    @IBAction func addDoctor(sender: UIBarButtonItem) {
+        
+    }
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -100,14 +106,21 @@ class DoctorTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
+        if segue.identifier == "DoctorTableViewCell" {
+            let detailVC: DoctorViewController = segue.destinationViewController as! DoctorViewController
+            let indexPath = self.tableView.indexPathForSelectedRow()
+//            let thisTask = self.objectAtIndexPath(indexPath!) as Doctor
+//            detailVC.Doctor = thisTask
+//            detailVC.delegate = self
+            
 
+    }
+        
+    }
 }

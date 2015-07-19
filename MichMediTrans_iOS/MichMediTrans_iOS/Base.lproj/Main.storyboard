@@ -93,6 +93,7 @@
                     <navigationItem key="navigationItem" title="Available Doctors" id="CgZ-iJ-wUJ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="G5T-T3-MmO">
                             <connections>
+                                <action selector="addDoctor:" destination="EA5-JR-Oyb" id="t5K-p1-UFv"/>
                                 <segue destination="Nfh-Og-BcN" kind="show" id="RfP-LT-YqQ"/>
                             </connections>
                         </barButtonItem>
@@ -102,15 +103,15 @@
             </objects>
             <point key="canvasLocation" x="2392" y="213"/>
         </scene>
-        <!--View Controller-->
+        <!--Doctor View Controller-->
         <scene sceneID="O86-Re-zRj">
             <objects>
-                <viewController id="Nfh-Og-BcN" sceneMemberID="viewController">
+                <viewController id="Nfh-Og-BcN" customClass="DoctorViewController" customModule="MichMediTrans_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sGr-DR-9PJ"/>
                         <viewControllerLayoutGuide type="bottom" id="BhN-91-bPt"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9rE-L1-U3S">
+                    <view key="view" contentMode="scaleToFill" id="9rE-L1-U3S" customClass="Doctorview">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
