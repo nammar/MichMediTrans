@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hBC-1w-2OS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MichMediTrans-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MichMediTrans_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,41 +18,122 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQe-Vk-kOf">
-                                <rect key="frame" x="104" y="285" width="173" height="30"/>
+                                <rect key="frame" x="104" y="280" width="173" height="35"/>
                                 <color key="backgroundColor" red="0.97289299240000005" green="0.59128623120000001" blue="0.1202985694" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Sign in as a patient">
+                                <state key="normal" title="View doctors">
                                     <color key="titleColor" red="0.89983822601010099" green="0.89983822601010099" blue="0.89983822601010099" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.97289299242424243" green="0.59128623119334978" blue="0.12029856937797526" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="104" y="272" width="173" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1fD-az-m0h"/>
                                     <action selector="signIn:" destination="dkx-z0-nzr" eventType="touchDown" id="cng-HH-W8f"/>
-                                    <segue destination="Usn-Tl-QBg" kind="show" id="lvX-UU-DA0"/>
+                                    <segue destination="EA5-JR-Oyb" kind="show" id="8O2-H6-B11"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="5s7-WW-4eE">
                                 <rect key="frame" x="70" y="71" width="240" height="193"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwZ-4G-kZw">
-                                <rect key="frame" x="104" y="316" width="173" height="36"/>
+                                <rect key="frame" x="104" y="373" width="173" height="36"/>
                                 <color key="backgroundColor" red="0.46688415015761531" green="0.23814802383396591" blue="0.59607796717171713" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" red="0.98887310606060608" green="0.98887310606060608" blue="0.98887310606060608" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="104" y="310" width="173" height="36"/>
+                                </variation>
                                 <connections>
                                     <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jka-aA-aa4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ay-R8-aPP">
+                                <rect key="frame" x="104" y="323" width="173" height="42"/>
+                                <color key="backgroundColor" red="0.19825921239145516" green="0.27181282639217486" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Lookup drivers">
+                                    <color key="titleColor" red="1" green="0.90212029780000003" blue="0.89732803539999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="69p-oY-3X3" kind="show" id="MO9-z5-STq"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.77310211489898983" green="0.77310211489898983" blue="0.77310211489898983" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="MichMediTrans" id="x5G-Gn-Ioq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="875" y="213"/>
+            <point key="canvasLocation" x="3936" y="64"/>
+        </scene>
+        <!--Driver Lookup View Controller-->
+        <scene sceneID="YV1-mg-11K">
+            <objects>
+                <viewController id="69p-oY-3X3" customClass="DriverLookupViewController" customModule="MichMediTrans_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bcG-OF-RjB"/>
+                        <viewControllerLayoutGuide type="bottom" id="ieM-fw-bkS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iwp-av-h8Q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4lh-cw-CIN">
+                                <rect key="frame" x="0.0" y="28" width="600" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="ddj-MB-USF"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ddj-MB-USF"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ddj-MB-USF"/>
+                                    </mask>
+                                </variation>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4lh-cw-CIN" firstAttribute="leading" secondItem="Iwp-av-h8Q" secondAttribute="leading" id="GVq-Cl-IGg"/>
+                            <constraint firstItem="4lh-cw-CIN" firstAttribute="top" secondItem="bcG-OF-RjB" secondAttribute="bottom" constant="8" symbolic="YES" id="Z4Q-9I-KaT"/>
+                            <constraint firstItem="4lh-cw-CIN" firstAttribute="leading" secondItem="Iwp-av-h8Q" secondAttribute="leading" id="agN-Qr-XEc"/>
+                            <constraint firstItem="ieM-fw-bkS" firstAttribute="top" secondItem="4lh-cw-CIN" secondAttribute="bottom" constant="72" id="lQh-6b-YoW"/>
+                            <constraint firstAttribute="trailing" secondItem="4lh-cw-CIN" secondAttribute="trailing" id="nhG-MQ-PxY"/>
+                            <constraint firstAttribute="trailing" secondItem="4lh-cw-CIN" secondAttribute="trailing" id="wDV-ep-puZ"/>
+                            <constraint firstItem="4lh-cw-CIN" firstAttribute="top" secondItem="Iwp-av-h8Q" secondAttribute="topMargin" constant="28" id="zgz-T1-6er"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Z4Q-9I-KaT"/>
+                                <exclude reference="agN-Qr-XEc"/>
+                                <exclude reference="wDV-ep-puZ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="Z4Q-9I-KaT"/>
+                                <include reference="agN-Qr-XEc"/>
+                                <include reference="wDV-ep-puZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="4lh-cw-CIN" id="eRi-1l-IHe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DmW-jv-IX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3994" y="763"/>
         </scene>
         <!--Available Doctors-->
         <scene sceneID="VOa-tw-FCV">
@@ -94,14 +176,13 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="G5T-T3-MmO">
                             <connections>
                                 <action selector="addDoctor:" destination="EA5-JR-Oyb" id="t5K-p1-UFv"/>
-                                <segue destination="Nfh-Og-BcN" kind="show" id="RfP-LT-YqQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izp-Rj-bKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2392" y="213"/>
+            <point key="canvasLocation" x="4589" y="64.5"/>
         </scene>
         <!--Doctor View Controller-->
         <scene sceneID="O86-Re-zRj">
@@ -127,6 +208,9 @@
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="111" width="179" height="128"/>
+                                </variation>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kke-Te-vmh">
                                 <rect key="frame" x="16" y="286" width="497" height="300"/>
@@ -140,6 +224,9 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V5i-Kr-fYh">
                                 <rect key="frame" x="355" y="111" width="158" height="128"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="203" y="111" width="158" height="128"/>
+                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,32 +234,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWc-EB-RAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3076" y="226"/>
+            <point key="canvasLocation" x="5425" y="132"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="AIS-iq-ySz">
+        <scene sceneID="Ke4-p8-eTh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Usn-Tl-QBg" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hBC-1w-2OS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="hHG-67-ajd"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wwz-ne-mly">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2fl-w7-nOg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="EA5-JR-Oyb" kind="relationship" relationship="rootViewController" id="7Cv-lL-oqQ"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8BI-xB-Qvc"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ioc-iK-zlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9Q-LQ-BsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="213"/>
+            <point key="canvasLocation" x="3124" y="64.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image" width="807" height="342"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="RfP-LT-YqQ"/>
-    </inferredMetricsTieBreakers>
 </document>
