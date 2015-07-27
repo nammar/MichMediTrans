@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>62AC2B11-32F2-4C8F-806B-DFF58E6D184C</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>MichMediTrans_iOS</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>FEC2A0BD584F35839FBC7A4D534B2A4666D3C13E</key>
 		<string>https://github.com/nammar/MichMediTrans.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MichMediTrans_iOS/MichMediTrans_iOS.xcodeproj/project.xcworkspace</string>
+	<string>MichMediTrans_iOS/MichMediTrans_iOS.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>FEC2A0BD584F35839FBC7A4D534B2A4666D3C13E</key>

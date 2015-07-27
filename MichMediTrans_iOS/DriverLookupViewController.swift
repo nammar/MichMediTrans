@@ -13,7 +13,10 @@ class DriverLookupViewController: UIViewController,MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var toAddressField: UITextField!
+    
     let initialLocation = CLLocation(latitude: 52.3740300, longitude: 4.8896900)
+   //TODO: make it 7 miles
     let searchRadius: CLLocationDistance = 2000
     
     override func viewDidLoad() {
@@ -23,6 +26,7 @@ class DriverLookupViewController: UIViewController,MKMapViewDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
 
         // Do any additional setup after loading the view.
+       // searchInMap()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +34,27 @@ class DriverLookupViewController: UIViewController,MKMapViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func searchInMap() {
+        // 1
+        let request = MKLocalSearchRequest()
+        request.naturalLanguageQuery = "Detroit"
+        //toAddressField.text
+            //segmentedControl.titleForSegmentAtIndex(segmentedControl.selectedSegmentIndex)
+        // 2
+        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        request.region = MKCoordinateRegion(center: initialLocation.coordinate, span: span)
+        // 3
+        let search = MKLocalSearch(request: request)
+        search.startWithCompletionHandler {
+            (response: MKLocalSearchResponse!, error: NSError!) in
+            
+            for item in response.mapItems as! [MKMapItem] {
+                println("Item name = \(item.name)")
+                println("Latitude = \(item.placemark.location.coordinate.latitude)")
+                println("Longitude = \(item.placemark.location.coordinate.longitude)")
+            }
+        }     
+    }
 
     /*
     // MARK: - Navigation
