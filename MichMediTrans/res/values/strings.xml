@@ -13,7 +13,7 @@
     <string name="title_activity_log_in">LogIn</string>
     <string name="title_activity_role_selection">RoleSelectionActivity</string>
     <string name="transportation_choices">Transportation Choices</string>
-    <string name="choose_provider">Choose Provider</string>
+    <string name="choose_provider">Choose Driver</string>
 	<string-array name="transportCompanies">
         <item>Choice 1</item>
         <item>Choice 2</item>
@@ -27,5 +27,12 @@
     </string-array>
         <string name="choose_type">Choose Type</string>
         <string name="submit">Submit</string>
+        <string name="autocomplete_hint">Enter place name or address</string>
+    <string name="selected_place">Last Selected Place:</string>
+    <string name="clear_text">Clear Text</string>
+
+    <!-- getString(String, Object...) does not support HTML tags directly, they need to be encoded first.
+    Original string: <b>%1$s</b><br/><i>Place Id: %2$s</i><br/>Address: %3$s<br/>Phone: %4$s<br/>Website: %5$s-->
+    <string name="place_details">&lt;b&gt;%1$s&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Place Id: %2$s&lt;/i&gt;&lt;br/&gt;Address: %3$s&lt;br/&gt;Phone: %4$s&lt;br/&gt;Website: %5$s</string>
 
 </resources>

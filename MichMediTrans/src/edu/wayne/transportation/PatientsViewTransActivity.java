@@ -1,67 +1,40 @@
 package edu.wayne.transportation;
 
-import edu.wayne.michmeditrans.R;
-import edu.wayne.michmeditrans.R.id;
-import edu.wayne.michmeditrans.R.layout;
-import edu.wayne.michmeditrans.R.menu;
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.Spinner;
+import android.widget.Toast;
 
-public class PatientsViewTransActivity extends Activity {
-	
-	// ----------------Declare Widget variables----------------//
-		private Spinner spCompanies, spTransportType;
-		private Button btSubmit;
-		
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.places.Places;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+
+import edu.wayne.michmeditrans.R;
+
+public class PatientsViewTransActivity extends FragmentActivity implements
+		GoogleApiClient.OnConnectionFailedListener {
+
+	/**
+	 * GoogleApiClient wraps our service connection to Google Play Services and
+	 * provides access to the user's sign in state as well as the Google's APIs.
+	 */
+	protected GoogleApiClient mGoogleApiClient;
+	MapView mapView;
+	GoogleMap map;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_patients_view_trans);
-		
-		//Define Widget variables
-		spCompanies = (Spinner) findViewById(R.id.spCompanies);
-		spTransportType = (Spinner) findViewById(R.id.spTransportType);
-		btSubmit = (Button) findViewById(R.id.btSubmit); 
-		
-		
-		//Define Submit Button
-		btSubmit.setOnClickListener(new View.OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				try {
-				
-					
-					String companyChoice = String.valueOf(spCompanies.getSelectedItem());
-					String TransTypeChoice = String.valueOf(spTransportType.getSelectedItem());
-					
-					//alert dialog checking users input
-					AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-					builder.setTitle("Transportation Choice");
-					builder.setMessage("Company: " + companyChoice + "\n"
-								        + "Transportation Type: " + TransTypeChoice + "\nAre You Sure?");
+		mGoogleApiClient = new GoogleApiClient.Builder(this)
+				.enableAutoManage(this, 0, this).addApi(Places.GEO_DATA_API)
+				.build();
 
-					//Accept user input or not-
-					//start new activity
-					builder.setPositiveButton("Yes",null);   ////-------Add code to start activity here in positive button-------//
-					builder.setNegativeButton("No",null);
-					builder.show();
-					
-				} catch (NumberFormatException e) {
-					System.out.println("Error: A input field is blank.");
-				}
-
-			}
-		});
 	}
 
 	@Override
@@ -82,4 +55,27 @@ public class PatientsViewTransActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+	/**
+	 * Called when the Activity could not connect to Google Play services and
+	 * the auto manager could resolve the error automatically. In this case the
+	 * API is not available and notify the user.
+	 * 
+	 * @param connectionResult
+	 *            can be inspected to determine the cause of the failure
+	 */
+	@Override
+	public void onConnectionFailed(ConnectionResult connectionResult) {
+
+		Log.e("patients trans activity",
+				"onConnectionFailed: ConnectionResult.getErrorCode() = "
+						+ connectionResult.getErrorCode());
+
+		Toast.makeText(
+				this,
+				"Could not connect to Google API Client: Error "
+						+ connectionResult.getErrorCode(), Toast.LENGTH_SHORT)
+				.show();
+	}
+
 }
