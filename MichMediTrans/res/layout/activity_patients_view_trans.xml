@@ -9,94 +9,63 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.wayne.transportation.PatientsViewTransActivity" >
 
-    <TableLayout
-        android:layout_width="286dp"
-        android:layout_height="200dp" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-        <TableRow
-            android:id="@+id/tableRow1"
+        <TextView
+            android:id="@+id/TextView01"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="From" />
 
-            <TextView
-                android:id="@+id/TextView01"
-                android:layout_width="wrap_content"
-                android:layout_height="42dp"
-                android:layout_marginTop="22dp"
-                android:layout_weight="0.61"
-                android:text="From Where" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow2"
+        <AutoCompleteTextView
+            android:id="@+id/AutoCompleteTextView01"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter place name or address"
+            android:textColor="@android:color/primary_text_light" >
 
-            <AutoCompleteTextView
-                android:id="@+id/AutoCompleteTextView01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.24"
-                android:ems="10"
-                android:hint="Enter address"
-                android:textColor="@android:color/primary_text_light" />
+            <requestFocus />
+        </AutoCompleteTextView>
+    </LinearLayout>
 
-        </TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-        <TableRow
-            android:id="@+id/tableRow3"
+        <TextView
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="To" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_marginTop="22dp"
-                android:layout_weight="0.34"
-                android:text="To Where" />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow4"
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete_places"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <AutoCompleteTextView
-                android:id="@+id/autocomplete_places"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.11"
-                android:ems="10"
-                android:hint="Enter address"
-                android:textColor="@android:color/primary_text_light" >
-
-                <requestFocus />
-            </AutoCompleteTextView>
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="When"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        </TableRow>
-
-    </TableLayout>
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter place name or address"
+            android:textColor="@android:color/primary_text_light" />
+    </LinearLayout>
 
     <fragment
         android:id="@+id/mapview1"
         android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="match_parent"
-        android:layout_height="182dp" />
+        android:layout_height="0dp"
+        android:layout_weight="0.75" />
+
+    <!--
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.55" >
+    </com.google.android.gms.maps.MapView>
+    -->
 
 </LinearLayout>
