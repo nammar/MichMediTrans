@@ -10,7 +10,7 @@
     tools:context="edu.wayne.transportation.PatientsViewTransActivity" >
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <TextView
@@ -22,7 +22,7 @@
 
         <AutoCompleteTextView
             android:id="@+id/AutoCompleteTextView01"
-            android:layout_width="wrap_content"
+            android:layout_width="252dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Enter place name or address"
@@ -33,7 +33,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <TextView
@@ -50,6 +50,7 @@
             android:ems="10"
             android:hint="Enter place name or address"
             android:textColor="@android:color/primary_text_light" />
+
     </LinearLayout>
 
     <fragment
