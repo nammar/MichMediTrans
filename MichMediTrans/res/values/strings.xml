@@ -10,6 +10,12 @@
     <string name="title_activity_drivers">DriversActivity</string>
     <string name="title_activity_doctors">DoctorsActivity</string>
     <string name="title_activity_patients_view_doctor">PatientsViewDoctorActivity</string>
+       <string-array name="doctorNames">
+        <item>Doctor John Doe</item>
+        <item>Doctor Jane Doe</item>
+        <item>Doctor Billy Jane</item>
+    </string-array>
+    
     <string name="title_activity_log_in">LogIn</string>
     <string name="title_activity_role_selection">RoleSelectionActivity</string>
     <string name="transportation_choices">Transportation Choices</string>

@@ -15,7 +15,7 @@ class DriverLookupViewController: UIViewController,MKMapViewDelegate {
     
     @IBOutlet weak var toAddressField: UITextField!
     
-    let initialLocation = CLLocation(latitude: 52.3740300, longitude: 4.8896900)
+    let initialLocation = CLLocation(latitude: 42.3314, longitude: -83.0458)
    //TODO: make it 7 miles
     let searchRadius: CLLocationDistance = 2000
     

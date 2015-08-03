@@ -8,9 +8,63 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.wayne.medical.PatientsViewDoctorActivity" >
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignRight="@+id/button1"
+        android:layout_alignStart="@+id/button1"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_marginStart="20dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:text="Button" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="95dp"
+        android:src="@drawable/ic_launcher" />
+    
+    
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:text="Button" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="95dp"
+        android:src="@drawable/ic_launcher" />
 
 </RelativeLayout>
