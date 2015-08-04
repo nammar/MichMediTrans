@@ -29,6 +29,7 @@ import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import edu.wayne.michmeditrans.R;
 import edu.wayne.model.DriverData;
@@ -156,7 +157,10 @@ public class PatientsViewTransActivity extends FragmentActivity implements
 			//displays detected address in from field
 			fromText.setText(a.getFeatureName() + "," + a.getLocality() + ","
 					+ a.getAdminArea() + " " + a.getPostalCode());
-
+			
+			map.addMarker(new MarkerOptions().position(new LatLng(42.3578, -83.0683 )).title("Nariman Ammar, Liscence plate 1234, cell 33388800, rating 5 stars, at Deroy auditorium"));
+			map.addMarker(new MarkerOptions().position(new LatLng(42.3593, -83.0648)).title("Anthony Blackgmon at DIA"));
+			map.addMarker(new MarkerOptions().position(new LatLng(42.3572585,-83.0685418)).title("Amney Iskandar at State hall"));
 		}
 	}
 
