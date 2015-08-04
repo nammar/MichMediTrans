@@ -1,2 +1,11 @@
 bin/
 *.class
+
+*.apk
+
+*.jar
+
+
+*.apk
+
+MichMediTrans/bin/MichMediTrans.apk
