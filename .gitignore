@@ -9,3 +9,13 @@ bin/
 *.apk
 
 MichMediTrans/bin/MichMediTrans.apk
+
+*.dex
+
+*.class
+
+*.class
+
+*.properties
+
+*.ap_
