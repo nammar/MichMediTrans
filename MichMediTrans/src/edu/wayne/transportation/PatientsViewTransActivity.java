@@ -62,57 +62,31 @@ public class PatientsViewTransActivity extends FragmentActivity implements
 	protected String mAddressOutput;
 	protected TextView fromText;
 	protected TextView toText;
-	private AddressResultReceiver mResultReceiver;
-
-	//private static final LatLng DETROIT = new LatLng(42.3314, -83.0458);
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		loadSampleDrivers();
 		setContentView(R.layout.activity_patients_view_trans);
-		mResultReceiver = new AddressResultReceiver(new Handler());
 		fromText = (TextView) findViewById(R.id.AutoCompleteTextView01);
 		toText = (TextView) findViewById(R.id.autocomplete_places);
 		buildGoogleApiClient();
-		// mGoogleApiClient = new GoogleApiClient.Builder(this)
-		// .enableAutoManage(this, 0, this).addApi(Places.GEO_DATA_API)
-		// .build();
 
 		MapFragment mapFragment = (MapFragment) getFragmentManager()
 				.findFragmentById(R.id.mapview1);
 		mapFragment.getMapAsync(this);
 		map = mapFragment.getMap();
-//		map.moveCamera(CameraUpdateFactory.newLatLngZoom(DETROIT, 15));
-//		map.animateCamera(CameraUpdateFactory.zoomIn());
-//		map.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
-//		CameraPosition cameraPosition = new CameraPosition.Builder()
-//				.target(DETROIT) // Sets the center of the map to Mountain View
-//				.zoom(10) // Sets the zoom
-//				.bearing(90) // Sets the orientation of the camera to east
-//				.tilt(30) // Sets the tilt of the camera to 30 degrees
-//				.build(); // Creates a CameraPosition from the builder
-//		map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-		
-	//	mLocationRequest = new LocationRequest();
-		// startLocationUpdates();
 
-		// Hardcoding drivers
-		//DriverData driver1 = new DriverData();
-		// TODO: JULIAN: set properties: name, picture, license plate, contact
-		// info
-		// TODO: ABDUL: look into how to retrieve driver location
-		// drivers.add(driver1);
+		// TODO:loadSampleDrivers();
 
 	}
 
 	private void loadSampleDrivers() {
-		DriverData driver1 = new DriverData();
-		//driver1.setLocation();
-		//driver2.setName();
-		
-		
+		// DriverData driver1 = new DriverData();
+		// driver1.setLocation();
+		// driver2.setName();
+		// drivers.add(driver1);
+
 	}
 
 	@Override
@@ -156,8 +130,6 @@ public class PatientsViewTransActivity extends FragmentActivity implements
 				.show();
 	}
 
-
-
 	@Override
 	public void onConnected(Bundle connectionHint) {
 
@@ -165,42 +137,31 @@ public class PatientsViewTransActivity extends FragmentActivity implements
 				.getLastLocation(mGoogleApiClient);
 
 		if (mLastLocation != null) {
-//			if (!Geocoder.isPresent()) {
-//				Toast.makeText(this, "no geocoder", Toast.LENGTH_LONG).show();
-//				return;
-//			}
-//
-//				map.addMarker(new MarkerOptions().position(
-//						new LatLng(65.9667, -18.5333
-//						// mLastLocation.getLatitude(),mLastLocation.getLongitude()
-//
-//						))
 
-//				.title("Your current location"
-//
-//				));
-//			}
-
-			// startIntentService();
-
-			// this.fromText
-			// .setText(String.valueOf(mLastLocation));
-
-			// Log.i("main-activity, longitude",String.valueOf(mLastLocation));
-			Log.i("main-activity, longitude",
-					String.valueOf(mLastLocation.getLatitude()));
-			Log.i("main-activity, latitude",
-					String.valueOf(mLastLocation.getLongitude()));
+			LatLng locc = new LatLng(mLastLocation.getLatitude(),
+					mLastLocation.getLongitude());
 			
-			LatLng locc = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
-
-			//map.moveCamera(CameraUpdateFactory.newLatLngZoom(locc, 15));
-			
-			//map.animateCamera(CameraUpdateFactory.zoomTo(20), 2000, null);
+			//Zooms into the currently detected location
 			CameraPosition cameraPosition = new CameraPosition.Builder()
-					.target(locc).zoom(17).bearing(90).tilt(10).build(); 
-			map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+					.target(locc).zoom(17).bearing(90).tilt(10).build();
+			map.animateCamera(CameraUpdateFactory
+					.newCameraPosition(cameraPosition));
 			
+			//Retrieves the address corresponding to the detected location
+			Geocoder geo = new Geocoder(this);
+			List<Address> locs = null;
+			try {
+				locs = geo.getFromLocation(mLastLocation.getLatitude(),
+						mLastLocation.getLongitude(), 1);
+			} catch (IOException e) {
+
+				e.printStackTrace();
+			}
+			Address a = locs.get(0);
+
+			//displays detected address in from field
+			fromText.setText(a.getFeatureName() + "," + a.getLocality() + ","
+					+ a.getAdminArea() + " " + a.getPostalCode());
 
 		}
 	}
@@ -226,13 +187,7 @@ public class PatientsViewTransActivity extends FragmentActivity implements
 	@Override
 	public void onLocationChanged(Location location) {
 		mLastLocation = location;
-		if (mLastLocation != null) {
-			Log.i("main-activity, longitude",
-					String.valueOf(mLastLocation.getLatitude()));
-			Log.i("main-activity, latitude",
-					String.valueOf(mLastLocation.getLongitude()));
-		}
-
+		
 	}
 
 	protected synchronized void buildGoogleApiClient() {
@@ -256,13 +211,6 @@ public class PatientsViewTransActivity extends FragmentActivity implements
 		}
 	}
 
-//	protected void startIntentService() {
-//		Intent intent = new Intent(this, FetchAddressIntentService.class);
-//		intent.putExtra(Constants.RECEIVER, mResultReceiver);
-//		intent.putExtra(Constants.LOCATION_DATA_EXTRA, mLastLocation);
-//		startService(intent);
-//	}
-
 	class AddressResultReceiver extends ResultReceiver {
 		public AddressResultReceiver(Handler handler) {
 			super(handler);
@@ -276,39 +224,23 @@ public class PatientsViewTransActivity extends FragmentActivity implements
 
 		}
 	}
-	
+
 	@Override
 	/**
 	 * https://developers.google.com/maps/documentation/android/marker
 	 */
 	public void onMapReady(GoogleMap map) {
-//		 map.addMarker(new MarkerOptions().position(
-//		 new LatLng(
-//		 42.3314, -83.0458
-//		 )) // TODO: ABDUL: get this from
-//		// // driver location
-//		 .title("Nariman Ammar, Liscence plate 1234, cell 33388800, rating 5 stars"
-//		// // +
-//		// // driver1.getName()
-//		 ));
-		 map.setMyLocationEnabled(true);
-		 Location loc = map.getMyLocation();
-		 
-//		 Geocoder geo = new Geocoder(this);
-if(loc!=null){
-		 Log.i("trans activity","location"+loc.toString());
-	//	 try {
-//			 
-//			List<Address> locs =geo.getFromLocation(loc.getLatitude(), loc.getLongitude(), 1);
-//			fromText.setText(locs.get(0).toString());
-//			 
-//			
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-		 }
-		 
+		// map.addMarker(new MarkerOptions().position(
+		// new LatLng(
+		// 42.3314, -83.0458
+		// )) // TODO: ABDUL: get this from
+		// // // driver location
+		// .title("Nariman Ammar, Liscence plate 1234, cell 33388800, rating 5 stars"
+		// // // +
+		// // // driver1.getName()
+		// ));
+		//displays the blue circle/dot on google maps representing current user location
+		map.setMyLocationEnabled(true);
 
 	}
 
