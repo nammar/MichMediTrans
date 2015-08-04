@@ -1,21 +1,15 @@
 bin/
-*.class
 
 *.apk
 
 *.jar
 
-
-*.apk
-
-MichMediTrans/bin/MichMediTrans.apk
-
 *.dex
-
-*.class
-
-*.class
 
 *.properties
 
 *.ap_
+
+MichMediTrans_PhoneGapWeb/
+MichMediTrans_WebPhoneGap/
+MichMediTrans_WebSteroids/
