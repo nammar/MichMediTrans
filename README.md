@@ -1,3 +1,4 @@
+The project uses java, swift, js, and css languages.
 This project is going to consist of the following three projects:
 -Android app
 -iOS app
